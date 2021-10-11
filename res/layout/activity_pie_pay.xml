@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PiePayActivity">
+
+
+
+
+    <RelativeLayout
+            android:id="@+id/pie_layout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/header"
+            android:background="@android:color/white">
+
+        <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/color_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pie_layout"
+            android:background="@android:color/white">
+        <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/color_text_grid"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:listSelector="@android:color/transparent">
+
+        </GridView>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pieList_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pie_layout">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+            android:id="@+id/pie_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:background="#BF000000" />
+
+    <RelativeLayout
+            android:id="@+id/pie_custom_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header">
+
+        <LinearLayout
+                android:id="@+id/pie_choose_year_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/choose_year_layout_type">
+
+            <RelativeLayout
+                    android:id="@+id/pie_left_year_botton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_arrow_left">
+
+                </ImageView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/pie_year_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2">
+
+                <TextView
+                        android:id="@+id/pie_year_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+                        android:singleLine="true"
+                        android:ellipsize="end">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/pie_right_year_botton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_arrow_right">
+
+                </ImageView>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <GridView
+                android:id="@+id/pie_month_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pie_choose_year_layout"
+                android:background="@drawable/choose_year_layout_type"
+                android:listSelector="@android:color/transparent">
+
+        </GridView>
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/header_type">
+
+        <ImageView
+                android:id="@+id/go_back_botton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_left_arrow">
+
+        </ImageView>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/pie_open_date_button"
+                >
+            <TextView
+                    android:id="@+id/time_title_in_pie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    >
+            </TextView>
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/time_title_in_pie"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp">
+                <ImageView
+                        android:id="@+id/pie_arrow_up"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_up">
+
+                </ImageView>
+
+                <ImageView
+                        android:id="@+id/pie_arrow_down"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_down">
+
+                </ImageView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/delete_dialog_type"
+        android:orientation="vertical"
+        >
+
+
+    <RelativeLayout
+            android:id="@+id/delete_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="確定要刪除此項目嗎?"
+                android:textColor="#4F4F4F"
+                android:id="@+id/delete_remind_text"
+                android:textSize="17dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delete_remind_text"
+                android:layout_centerHorizontal="true"
+                android:text="刪除後將無法復原"
+                android:layout_marginTop="5dp"
+                android:textColor="#9D9D9D"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/line_above_button"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/delete_text"
+            android:background="#D0D0D0">
+    </TextView>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_above_button"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+                android:id="@+id/deleteDialogContinueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="確定"
+                    android:textColor="#3C3C3C"
+
+                    />
+        </RelativeLayout>
+        <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0.5dp"
+                android:background="#D0D0D0"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp">
+
+        </TextView>
+
+        <RelativeLayout
+                android:id="@+id/deleteDialogCancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="取消"
+                    android:textColor="#3C3C3C"
+
+                    />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

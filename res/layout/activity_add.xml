@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@android:color/white">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/header_type"
+            android:id="@+id/header">
+        <ImageView
+                android:id="@+id/go_back_botton_at_add_activity"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_left_arrow">
+
+        </ImageView>
+        <Spinner
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/changeSpinner">
+
+        </Spinner>
+    </RelativeLayout>
+
+    <GridView
+            android:id="@+id/txt_addThings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="15dp"
+            android:numColumns="4" />
+</LinearLayout>

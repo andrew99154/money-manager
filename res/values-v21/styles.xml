@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#99D9EA</item>
+        <item name="colorAccent">#99D9EA</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/spalash_screen</item>
+    </style>
+<style name="button" parent="Widget.Design.FloatingActionButton">
+    <item name="android:windowIsFloating">false</item>
+</style>
+
+
+
+
+</resources>

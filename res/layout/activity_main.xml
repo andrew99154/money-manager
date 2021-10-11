@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+
+    <RelativeLayout
+            android:id="@+id/alltotal_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="83dp"
+            android:layout_below="@+id/main_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_type">
+
+        <RelativeLayout
+                android:id="@+id/sallary_layout"
+                android:layout_width="109.3dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                <TextView
+                        android:id="@+id/txt_sallary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="收入"
+                        android:textColor="#3C3C3C"
+                        android:textSize="18dp" />
+
+                <TextView
+                        android:id="@+id/numSallary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_sallary"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textColor="#3C3C3C"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/line_1"
+                android:layout_width="1dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/sallary_layout"
+                android:background="@android:color/black" />
+
+        <RelativeLayout
+                android:id="@+id/pay_layout"
+                android:layout_width="109.3dp"
+                android:layout_height="63dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/line_1">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                <TextView
+                        android:id="@+id/num_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_pay"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0dp"
+                        android:text="0"
+                        android:textColor="#3C3C3C"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"/>
+
+                <TextView
+                        android:id="@+id/txt_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="支出"
+                        android:textColor="#3C3C3C"
+                        android:textSize="18dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/line_2"
+                android:layout_width="1dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/pay_layout"
+                android:background="@android:color/black" />
+
+        <RelativeLayout
+                android:id="@+id/total_layout"
+                android:layout_width="109.4dp"
+                android:layout_height="63dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/line_2">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                <TextView
+                        android:id="@+id/numTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_Total"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-1dp"
+                        android:text="0"
+                        android:textColor="#3C3C3C"
+                        android:textSize="20dp"
+                        />
+
+                <TextView
+                        android:id="@+id/txt_Total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="結餘"
+                        android:textColor="#3C3C3C"
+                        android:textSize="18dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/alltotal_layout"
+            android:scrollbars="vertical" />
+
+    <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_list_button"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+    <TextView
+            android:id="@+id/mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_header"
+            android:background="#BF000000" />
+
+    <RelativeLayout
+            android:id="@+id/custom_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_header">
+
+        <LinearLayout
+                android:id="@+id/choose_year_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/choose_year_layout_type">
+
+            <RelativeLayout
+                    android:id="@+id/left_year_botton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_arrow_left">
+
+                </ImageView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/year_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2">
+
+                <TextView
+                        android:id="@+id/year_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+                        android:singleLine="true"
+                        android:ellipsize="end">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/right_year_botton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_arrow_right">
+
+                </ImageView>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <GridView
+                android:id="@+id/month_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choose_year_layout"
+                android:background="@drawable/choose_year_layout_type"
+                android:listSelector="@android:color/transparent">
+
+        </GridView>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/main_header"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/header_type">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/text_and_arrow"
+                >
+
+            <RelativeLayout
+                    android:id="@+id/month_botton"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    >
+
+                <ImageView
+                        android:id="@+id/arrow_up"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_up">
+
+                </ImageView>
+
+                <ImageView
+                        android:id="@+id/arrow_down"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_down">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/top_month_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/month_botton"
+                    android:textColor="#3C3C3C"
+                    android:textSize="15dp" />
+        </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
